@@ -49,9 +49,9 @@ namespace UGF.Elements.Runtime
 
         public bool TryGet<T>(out T value)
         {
-            if (TryGet(typeof(T), out object result) && result is T cast)
+            if (TryGet(typeof(T), out object result))
             {
-                value = cast;
+                value = (T)result;
                 return true;
             }
 

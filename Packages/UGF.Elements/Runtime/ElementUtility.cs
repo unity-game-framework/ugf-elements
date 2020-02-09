@@ -1,6 +1,6 @@
 ﻿namespace UGF.Elements.Runtime
 {
-    public static class ElementsUtility
+    public static class ElementUtility
     {
     }
 }
