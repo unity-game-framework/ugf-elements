@@ -170,16 +170,7 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
-      type: {class: ElementBuilder, ns: UGF.Elements.Runtime, asm: UGF.Elements.Runtime}
-      data:
-        m_children:
-        - id: 1
-    00000001:
-      type: {class: ElementBuilder, ns: UGF.Elements.Runtime, asm: UGF.Elements.Runtime}
-      data:
-        m_children:
-        - id: 0
-        - id: 0
+      type: {class: , ns: , asm: }
 --- !u!114 &916103403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +185,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_builder1:
     id: 0
+  m_builder2:
+    id: 1
+  m_builder3:
+    id: 2
   references:
     version: 1
     00000000:
+      type: {class: ElementBuilder, ns: UGF.Elements.Runtime, asm: UGF.Elements.Runtime}
+      data:
+        m_children:
+        - id: 1
+    00000001:
       type: {class: , ns: , asm: }
+    00000002:
+      type: {class: TestBuilder, ns: UGF.Elements.Runtime.Tests, asm: UGF.Elements.Runtime.Tests}
+      data:
+        m_children: []
+        m_stringValue: 
+        m_boolValue: 1
+        m_intValue: 57
