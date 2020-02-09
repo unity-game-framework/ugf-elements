@@ -1,3 +1,17 @@
-﻿{
-	"name": "UGF.Elements.Editor"
+{
+    "name": "UGF.Elements.Editor",
+    "references": [
+        "GUID:8170e5f803bffcd488da34eb65a3be76"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

@@ -1,3 +1,16 @@
-﻿{
-	"name": "UGF.Elements.Runtime"
+{
+    "name": "UGF.Elements.Runtime",
+    "references": [
+        "GUID:a4312e46e9f64bb4aa011ac96ffd2a61",
+        "GUID:d067af32d09350a4bb33960432735e4d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
