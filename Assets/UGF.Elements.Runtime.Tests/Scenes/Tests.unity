@@ -130,8 +130,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 916103401}
-  - component: {fileID: 916103402}
   - component: {fileID: 916103403}
+  - component: {fileID: 916103402}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -162,15 +162,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 916103400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7821e9cf28264ddfa0e0d5a353ece749, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d9b659060aa471593fdf7a5cb6f00b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_builder:
-    id: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: , ns: , asm: }
+  m_children: []
 --- !u!114 &916103403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,28 +175,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 916103400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 467da0a30dc4403bab529a700ad8a7b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d9b659060aa471593fdf7a5cb6f00b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_builder1:
-    id: 0
-  m_builder2:
-    id: 1
-  m_builder3:
-    id: 2
-  references:
-    version: 1
-    00000000:
-      type: {class: ElementBuilder, ns: UGF.Elements.Runtime, asm: UGF.Elements.Runtime}
-      data:
-        m_children:
-        - id: 1
-    00000001:
-      type: {class: , ns: , asm: }
-    00000002:
-      type: {class: TestBuilder, ns: UGF.Elements.Runtime.Tests, asm: UGF.Elements.Runtime.Tests}
-      data:
-        m_children: []
-        m_stringValue: 
-        m_boolValue: 1
-        m_intValue: 57
+  m_children:
+  - {fileID: 916103402}

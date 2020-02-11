@@ -6,9 +6,9 @@ namespace UGF.Elements.Runtime
 {
     public interface IElement : IInitialize
     {
+        IReadOnlyList<IElement> Children { get; }
         IElement Parent { get; }
         bool HasParent { get; }
-        IReadOnlyList<IElement> Children { get; }
 
         void Add(IElement element);
         void Remove(IElement element);

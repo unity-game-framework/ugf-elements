@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UGF.Initialize.Runtime;
 
 namespace UGF.Elements.Runtime
 {
-    public class Element : InitializeBase, IElement
+    public class Element : InitializeBase, IElement, IEnumerable<IElement>
     {
+        public IReadOnlyList<IElement> Children { get; }
         public IElement Parent { get { return m_parent ?? throw new ArgumentException("Parent not assigned."); } }
         public bool HasParent { get { return m_parent != null; } }
-        public IReadOnlyList<IElement> Children { get; }
 
         private readonly List<IElement> m_children = new List<IElement>();
         private Element m_parent;
@@ -43,7 +44,7 @@ namespace UGF.Elements.Runtime
 
         protected virtual void OnUninitializeChildren()
         {
-            for (int i = 0; i < m_children.Count; i++)
+            for (int i = m_children.Count - 1; i >= 0; i--)
             {
                 m_children[i].Uninitialize();
             }
@@ -63,9 +64,16 @@ namespace UGF.Elements.Runtime
         {
             if (element == null) throw new ArgumentNullException(nameof(element));
             if (m_children.Contains(element)) throw new ArgumentException($"Element already child of this element: '{element}'.");
+            if (IsInitialized && !element.IsInitialized) throw new ArgumentException($"Element not initialized: '{element}'.");
 
-            element.OnParentChange(this);
+            if (element.m_parent != null)
+            {
+                element.OnParentClear();
+                element.m_parent = null;
+            }
+
             element.m_parent = this;
+            element.OnParentChange();
 
             m_children.Add(element);
 
@@ -140,12 +148,27 @@ namespace UGF.Elements.Runtime
         {
         }
 
-        protected virtual void OnParentChange(Element parent)
+        protected virtual void OnParentChange()
         {
         }
 
         protected virtual void OnParentClear()
         {
+        }
+
+        public List<IElement>.Enumerator GetEnumerator()
+        {
+            return m_children.GetEnumerator();
+        }
+
+        IEnumerator<IElement> IEnumerable<IElement>.GetEnumerator()
+        {
+            return m_children.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return m_children.GetEnumerator();
         }
     }
 }

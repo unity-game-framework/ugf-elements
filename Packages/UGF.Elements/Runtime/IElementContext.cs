@@ -5,6 +5,8 @@ namespace UGF.Elements.Runtime
 {
     public interface IElementContext : IEnumerable<object>
     {
+        void Add(object value);
+        void Remove(object value);
         T Get<T>();
         object Get(Type type);
         bool TryGet<T>(out T value);

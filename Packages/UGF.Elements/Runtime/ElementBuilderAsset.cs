@@ -5,7 +5,7 @@ using Object = UnityEngine.Object;
 
 namespace UGF.Elements.Runtime
 {
-    public abstract class ElementBuilder : MonoBehaviour, IElementBuilder
+    public abstract class ElementBuilderAsset : ScriptableObject, IElementBuilder
     {
         [SerializeField] private List<Object> m_children = new List<Object>();
 
