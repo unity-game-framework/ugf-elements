@@ -2,6 +2,6 @@
 {
     public interface IElementBuilder
     {
-        IElement Build(IElementContext context);
+        IElement Build();
     }
 }

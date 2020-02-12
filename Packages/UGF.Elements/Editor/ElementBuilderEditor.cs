@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace UGF.Elements.Editor
 {
-    [CustomEditor(typeof(ElementBuilder), true)]
+    // [CustomEditor(typeof(ElementBuilder), true)]
     internal class ElementBuilderEditor : UnityEditor.Editor
     {
         private readonly string[] m_excluding = { "m_Script", "m_children" };
