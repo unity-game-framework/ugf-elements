@@ -10,7 +10,8 @@ UGF.Elements
 
 ### Dependencies
 
-- N/A
+- [UGF.Initialize](https://github.com/unity-game-framework/ugf-initialize): `2.0.0-preview`
+- [UGF.EditorTools](https://github.com/unity-game-framework/ugf-editortools): `0.5.1-preview`
 
 ### Changelog
 
