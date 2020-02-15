@@ -2,7 +2,7 @@
 {
     public class TestElementBuilder : ElementBuilder
     {
-        protected override IElement OnBuild()
+        protected override IElement OnBuild(IElementContext context)
         {
             return new TestElement();
         }

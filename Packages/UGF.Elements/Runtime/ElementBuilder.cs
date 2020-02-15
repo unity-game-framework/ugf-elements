@@ -4,11 +4,11 @@ namespace UGF.Elements.Runtime
 {
     public abstract class ElementBuilder : MonoBehaviour, IElementBuilder
     {
-        public IElement Build()
+        public IElement Build(IElementContext context)
         {
-            return OnBuild();
+            return OnBuild(context);
         }
 
-        protected abstract IElement OnBuild();
+        protected abstract IElement OnBuild(IElementContext context);
     }
 }
