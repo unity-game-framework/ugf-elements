@@ -1,10 +1,13 @@
-﻿namespace UGF.Elements.Runtime.Tests
+﻿using UnityEngine;
+
+namespace UGF.Elements.Runtime.Tests
 {
-    public class TestElementBuilder : ElementBuilder
+    public class TestElementBuilder : ElementParentBuilder
     {
-        protected override IElement OnBuild(IElementContext context)
-        {
-            return new TestElement();
-        }
+        [SerializeField] private bool m_boolValue;
+        [SerializeField] private float m_floatValue;
+
+        public bool BoolValue { get { return m_boolValue; } set { m_boolValue = value; } }
+        public float FloatValue { get { return m_floatValue; } set { m_floatValue = value; } }
     }
 }

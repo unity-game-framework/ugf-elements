@@ -3,11 +3,12 @@
 namespace UGF.Elements.Runtime.Tests
 {
     [CreateAssetMenu(menuName = "Tests/TestElementBuilderAsset")]
-    public class TestElementBuilderAsset : ElementBuilderAsset
+    public class TestElementBuilderAsset : ElementParentBuilderAsset
     {
-        protected override IElement OnBuild(IElementContext context)
-        {
-            return new TestElement();
-        }
+        [SerializeField] private bool m_boolValue;
+        [SerializeField] private float m_floatValue;
+
+        public bool BoolValue { get { return m_boolValue; } set { m_boolValue = value; } }
+        public float FloatValue { get { return m_floatValue; } set { m_floatValue = value; } }
     }
 }
