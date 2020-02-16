@@ -26,6 +26,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Nothing.
 
+## 0.2.0-preview - 2020-02-16
+- [Commits](https://github.com/unity-game-framework/ugf-elements/compare/0.1.0-preview...0.2.0-preview)
+- [Milestone](https://github.com/unity-game-framework/ugf-elements/milestone/2?closed=1)
+
+### Added
+- Add `ElementCollection` to contain a collection of `IElement`.
+- Add `ElementParent` with children elements.
+- Add `ElementParentBuilder` and `ElementParentBuilderAsset` to build `IElementParent` from components or assets.
+
+### Changed
+- Package dependencies:
+    - `com.ugf.initialize`: from `2.0.0-preview` to `2.2.0-preview`.
+    - `com.ugf.editortools`: from `0.5.1-preview` to `0.6.0-preview`.
+
 ## 0.1.0-preview - 2020-02-15
 - [Commits](https://github.com/unity-game-framework/ugf-elements/compare/6f25a25...0.1.0-preview)
 - [Milestone](https://github.com/unity-game-framework/ugf-elements/milestone/1?closed=1)

@@ -4,14 +4,14 @@ UGF.Elements
 
 ## Info
 
-- **Version**: `0.1.0-preview`
+- **Version**: `0.2.0-preview`
 - **Unity Version**: `2019.3.0`
 - **API Compatibility Level**: `.NET Standard 2.0`
 
 ### Dependencies
 
-- [UGF.Initialize](https://github.com/unity-game-framework/ugf-initialize): `2.0.0-preview`
-- [UGF.EditorTools](https://github.com/unity-game-framework/ugf-editortools): `0.5.1-preview`
+- [UGF.Initialize](https://github.com/unity-game-framework/ugf-initialize): `2.2.0-preview`
+- [UGF.EditorTools](https://github.com/unity-game-framework/ugf-editortools): `0.6.0-preview`
 
 ### Changelog
 
