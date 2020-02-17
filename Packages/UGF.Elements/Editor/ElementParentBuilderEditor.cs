@@ -8,11 +8,14 @@ namespace UGF.Elements.Editor
     [CustomEditor(typeof(ElementParentBuilder), true)]
     internal class ElementParentBuilderEditor : UnityEditor.Editor
     {
-        private readonly string[] m_excluding = { "m_children" };
+        private readonly string[] m_excluding = { "m_Script", "m_children" };
+        private SerializedProperty m_propertyScript;
         private ReorderableList m_list;
 
         private void OnEnable()
         {
+            m_propertyScript = serializedObject.FindProperty("m_Script");
+
             SerializedProperty propertyChildren = serializedObject.FindProperty("m_children");
 
             m_list = new ReorderableList(serializedObject, propertyChildren);
@@ -25,6 +28,11 @@ namespace UGF.Elements.Editor
         public override void OnInspectorGUI()
         {
             serializedObject.UpdateIfRequiredOrScript();
+
+            using (new EditorGUI.DisabledScope(true))
+            {
+                EditorGUILayout.PropertyField(m_propertyScript);
+            }
 
             DrawPropertiesExcluding(serializedObject, m_excluding);
 
