@@ -8,6 +8,7 @@ namespace UGF.Elements.Runtime
         bool Contains(IElement element);
         void Add(IElement element);
         bool Remove(IElement element);
+        void Clear();
         T Get<T>() where T : IElement;
         IElement Get(Type type);
         bool TryGet<T>(out T element) where T : IElement;
