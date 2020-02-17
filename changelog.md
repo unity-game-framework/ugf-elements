@@ -26,6 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Nothing.
 
+## 0.2.1-preview - 2020-02-17
+- [Commits](https://github.com/unity-game-framework/ugf-elements/compare/0.2.0-preview...0.2.1-preview)
+- [Milestone](https://github.com/unity-game-framework/ugf-elements/milestone/3?closed=1)
+
+### Fixed
+- Fix `ElementParentBuilder` and `ElementParentBuilderAsset` script field left enabled in inspector.
+
 ## 0.2.0-preview - 2020-02-16
 - [Commits](https://github.com/unity-game-framework/ugf-elements/compare/0.1.0-preview...0.2.0-preview)
 - [Milestone](https://github.com/unity-game-framework/ugf-elements/milestone/2?closed=1)
