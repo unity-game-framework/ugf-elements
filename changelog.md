@@ -26,6 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Nothing.
 
+## 0.2.2-preview - 2020-02-17
+- [Commits](https://github.com/unity-game-framework/ugf-elements/compare/0.2.1-preview...0.2.2-preview)
+- [Milestone](https://github.com/unity-game-framework/ugf-elements/milestone/4?closed=1)
+
+### Added
+- Add `IElementCollection.Clear` method to clear all items.
+
 ## 0.2.1-preview - 2020-02-17
 - [Commits](https://github.com/unity-game-framework/ugf-elements/compare/0.2.0-preview...0.2.1-preview)
 - [Milestone](https://github.com/unity-game-framework/ugf-elements/milestone/3?closed=1)
