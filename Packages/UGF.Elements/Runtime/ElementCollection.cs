@@ -28,6 +28,11 @@ namespace UGF.Elements.Runtime
             return m_elements.Remove(element);
         }
 
+        public void Clear()
+        {
+            m_elements.Clear();
+        }
+
         public T Get<T>() where T : IElement
         {
             return (T)Get(typeof(T));
